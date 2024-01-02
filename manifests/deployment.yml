@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mstetrisgame 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mstetrisgame
+  template:
+    metadata:
+      labels:
+        app: mstetrisgame 
+    spec:
+      containers:
+        - name: mstetrisgame 
+          image: mylabacr24.azurecr.io/mstetrisgame
+          ports:
+          - containerPort: 80
