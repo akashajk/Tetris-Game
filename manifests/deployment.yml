@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akashajktetrisgame 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akashajktetrisgame
+  template:
+    metadata:
+      labels:
+        app: akashajktetrisgame 
+    spec:
+      containers:
+        - name: akashajktetrisgame 
+          image: mylabacr89.azurecr.io/akashajktetrisgame
+          ports:
+          - containerPort: 80
