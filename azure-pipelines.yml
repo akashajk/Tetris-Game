@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: '16caf05c-eb96-41f9-b370-bd2474b6f980'
   imageRepository: 'ajktetrisgame'
   containerRegistry: 'mylabacr89.azurecr.io'
-  dockerfilePath: 'C:\Program Files\Docker\Docker'
+  dockerfilePath: 'C:\Program Files\Docker\Docker\resources\bin\docker.exe'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'mylabacr89185401a9-auth'
 
