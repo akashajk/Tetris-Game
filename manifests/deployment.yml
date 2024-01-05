@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ajktetrisgame 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ajktetrisgame
+  template:
+    metadata:
+      labels:
+        app: ajktetrisgame 
+    spec:
+      containers:
+        - name: ajktetrisgame 
+          image: mylabacr25.azurecr.io/ajktetrisgame
+          ports:
+          - containerPort: 80
