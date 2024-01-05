@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: game 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game
+  template:
+    metadata:
+      labels:
+        app: game 
+    spec:
+      containers:
+        - name: game 
+          image: mylabacr25.azurecr.io/game
+          ports:
+          - containerPort: 80
